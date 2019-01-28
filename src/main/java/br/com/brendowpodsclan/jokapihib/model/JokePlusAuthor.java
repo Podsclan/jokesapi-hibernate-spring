@@ -1,13 +1,16 @@
 package br.com.brendowpodsclan.jokapihib.model;
 
+import org.springframework.stereotype.Component;
+
 import java.util.Optional;
 
+@Component
 public class JokePlusAuthor {
 
     private int id;
     private String type;
     private String joke;
-    private Optional<Author> author;
+    private Author author;
 
     public JokePlusAuthor() {
     }
@@ -36,11 +39,11 @@ public class JokePlusAuthor {
         this.joke = joke;
     }
 
-    public Optional<Author> getAuthor() {
+    public Author getAuthor() {
         return author;
     }
 
-    public void setAuthor(Optional<Author> author) {
+    public void setAuthor(Author author) {
         this.author = author;
     }
 }

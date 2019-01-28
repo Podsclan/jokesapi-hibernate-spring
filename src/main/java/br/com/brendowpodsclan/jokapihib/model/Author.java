@@ -1,8 +1,11 @@
 package br.com.brendowpodsclan.jokapihib.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name = "author")
 public class Author {
 

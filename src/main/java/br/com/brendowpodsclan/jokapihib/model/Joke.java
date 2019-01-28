@@ -1,8 +1,13 @@
 package br.com.brendowpodsclan.jokapihib.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
 
+@Component
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 @Table(name = "joke")
 public class Joke {
 

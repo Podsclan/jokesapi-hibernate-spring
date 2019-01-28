@@ -39,7 +39,7 @@ public class JokesDAO {
 
     public JokePlusAuthor setJoke(Joke joke) {
         JokePlusAuthor j = new JokePlusAuthor();
-        Optional<Author> author = authorRepository.findById(joke.getAuthorid());
+        Author author = authorRepository.getOne(joke.getAuthorid());
         j.setId(joke.getId());
         j.setType(joke.getType());
         j.setJoke(joke.getJoke());
